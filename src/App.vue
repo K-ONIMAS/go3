@@ -1,5 +1,5 @@
 <template>
-    <div>{{$t("message.a")}}</div>      
+    <router-view/>   
 </template>
 
 <script>
