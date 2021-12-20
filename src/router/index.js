@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Homepage from '../views/homepage/Homepage.vue'
+import Homepage from '@/views/homepage/Homepage.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +18,21 @@ const router = new VueRouter({
   routes
 })
 
+
+const originPush = VueRouter.prototype.push
+const originReplace = VueRouter.prototype.replace
+
+VueRouter.prototype.push = function(location,resolve,reject) {
+  resolve = resolve?resolve:()=>{};
+  reject = reject?reject:()=>{};
+  originPush.call(this,location,resolve,reject)
+}
+
+VueRouter.prototype.replace = function(location,resolve,reject) {
+  resolve = resolve?resolve:()=>{};
+  reject = reject?reject:()=>{};
+  originReplace.call(this,location,resolve,reject)
+}
 
 
 export default router
