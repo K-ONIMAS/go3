@@ -8,8 +8,13 @@ import VueI18n from 'vue-i18n'
 import i18n from './i18n'
 
 Vue.use(VueI18n)
-
 Vue.config.productionTip = false
+
+//mock.js设置
+if (process.env.NODE_ENV !== 'production' && !process.env.VUE_APP_BACK_END_URL) {
+  const Mock = require('./mock/index').default
+  Mock.mockData()
+}
 
 new Vue({
   router,

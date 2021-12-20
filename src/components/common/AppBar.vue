@@ -34,7 +34,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+   data(){
+      return{
+         links:["link1","link2"]
+      }
+   }
+};
 </script>
 
 <style>
