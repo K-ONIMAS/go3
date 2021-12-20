@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import AppBar from ".././components/common/AppBar.vue";
-import Carousel from ".././components/homepage/Carousel.vue"
+import AppBar from "../../components/common/AppBar.vue";
+import Carousel from "../../components/homepage/Carousel.vue"
 
 export default {
   data: () => ({ drawer: null }),

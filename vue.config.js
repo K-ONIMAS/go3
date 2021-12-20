@@ -17,9 +17,7 @@ module.exports = {
       config[path] = {
         target:process.env.VUE_APP_BASE_PATH,
         changeOrigin:true,
-        pathRewirite:{
-          ['^'+path]:"/"
-        }
+        pathRewirite:{}
       }
     })()
   }
