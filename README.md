@@ -1,5 +1,3 @@
-# Go3 project
+# vue-template
 
 ## feature
-
-- [x] hoemppage
